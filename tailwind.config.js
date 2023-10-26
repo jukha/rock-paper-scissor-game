@@ -3,24 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      maxWidth: {
-        custom: "600px",
-      },
-      borderColor: {
-        headerOutline: "hsl(217, 16%, 45%)",
-      },
-      colors: {
-        dark: "hsl(229, 25%, 31%)",
-        score: "hsl(229, 64%, 46%)",
-        headerOutline: "hsl(217, 16%, 45%)",
-      },
-      fontFamily: {
-        barlow: ["Barlow Semi Condensed", "sans-serif"],
-      },
-      backgroundColor: {
-        bars: "hsl(237, 49%, 15%)",
-      },
       backgroundImage: {
+        triangleImg: "url('/assets/bg-triangle.svg')",
         scissorsGradient:
           "linear-gradient(45deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%))",
         paperGradient:
@@ -33,6 +17,39 @@ export default {
           "linear-gradient(45deg, hsl(189, 59%, 53%), hsl(189, 58%, 57%))",
         radialGradient:
           "radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%))",
+      },
+      backgroundColor: {
+        bars: "hsl(237, 49%, 15%)",
+        noSelection: "hsl(237, 49%, 15%)",
+      },
+      borderColor: {
+        headerOutline: "hsl(217, 16%, 45%)",
+      },
+      keyframes: {
+        "custom-pulse": {
+          "0%": {
+            "box-shadow":
+              "0 0 0 0.5rem hsla(0,0%,100%,.2), 0 0 0 1rem hsla(0,0%,100%,.2), 0 0 0 2rem hsla(0,0%,100%,.2)",
+          },
+          "100%": {
+            "box-shadow":
+              "0 0 0 100px hsla(0,0%,100%,.2), 0 0 0 150px hsla(0,0%,100%,.2), 0 0 0 100px hsla(0,0%,100%,0)",
+          },
+        },
+      },
+      animation: {
+        pulse: "custom-pulse linear 2s infinite alternate",
+      },
+      colors: {
+        dark: "hsl(229, 25%, 31%)",
+        score: "hsl(229, 64%, 46%)",
+        headerOutline: "hsl(217, 16%, 45%)",
+      },
+      fontFamily: {
+        barlow: ["Barlow Semi Condensed", "sans-serif"],
+      },
+      maxWidth: {
+        custom: "1440px",
       },
     },
   },

@@ -16,7 +16,7 @@ function Rules() {
         </button>
       </a>
       {showModal && (
-        <section className="fixed inset-0 z-10 flex justify-center items-center bg-black bg-opacity-50">
+        <section className="fixed inset-0 z-30 flex justify-center items-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-md">
             <div className="flex justify-between items-center mb-7">
               <h3 className="uppercase text-dark text-2xl font-bold">Rules</h3>

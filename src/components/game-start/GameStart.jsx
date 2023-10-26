@@ -9,6 +9,8 @@ import {
 } from "../gameSlice";
 import { useEffect, useRef } from "react";
 import GameResult from "../game-result/GameResult";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function GameStart() {
   const userSelection = useSelector(getUserSelection);
@@ -30,6 +32,9 @@ function GameStart() {
     "rounded-full h-52 w-52  flex justify-center items-center";
 
   useEffect(() => {
+    Aos.init({
+      delay: 300,
+    });
     if (!compSelection) {
       let previousRandomIndex = -1; // Initialize with an invalid value
 
@@ -71,7 +76,7 @@ function GameStart() {
 
   return (
     <div className="relative z-20 mx-auto flex max-w-[800px] justify-between">
-      <div>
+      <div data-aos="fade-right">
         <h3 className="text-infinity mb-10 text-center text-2xl uppercase tracking-wider text-white">
           You picked
         </h3>
@@ -92,7 +97,7 @@ function GameStart() {
       {/* Reset Game */}
       {/* ============ */}
       {<GameResult />}
-      <div>
+      <div data-aos="fade-left">
         <h3 className="mb-10 text-center text-2xl uppercase tracking-wider text-white">
           The house picked
         </h3>

@@ -1,4 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import rockImg from "./../assets/icon-rock.svg";
+import paperImg from "./../assets/icon-paper.svg";
+import scissorsImg from "./../assets/icon-scissors.svg";
 
 const initialState = {
   userTotalScore: 0,
@@ -8,7 +11,7 @@ const initialState = {
   allSelections: [
     {
       name: "paper",
-      img: "/assets/icon-paper.svg",
+      img: paperImg,
       power: {
         rock: 1,
         scissors: -1,
@@ -17,7 +20,7 @@ const initialState = {
     },
     {
       name: "scissors",
-      img: "/assets/icon-scissors.svg",
+      img: scissorsImg,
       power: {
         rock: -1,
         scissors: 0,
@@ -26,7 +29,7 @@ const initialState = {
     },
     {
       name: "rock",
-      img: "/assets/icon-rock.svg",
+      img: rockImg,
       power: {
         rock: 0,
         scissors: 1,

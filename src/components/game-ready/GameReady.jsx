@@ -16,7 +16,7 @@ function GameReady() {
     });
   }, []);
   return (
-    <div className="relative z-20 mx-auto flex max-w-[400px] flex-wrap items-center justify-center gap-20 bg-triangleImg  bg-center bg-no-repeat">
+    <div className=" relative z-20 mx-auto flex max-w-[400px] flex-wrap items-center justify-center gap-20 bg-triangleImg  bg-center bg-no-repeat">
       {allSelections.map((selection, i) => {
         return (
           <a

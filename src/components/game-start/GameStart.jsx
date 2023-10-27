@@ -81,9 +81,13 @@ function GameStart() {
           You picked
         </h3>
         <div
-          className={`flex h-52 w-52  items-center justify-center rounded-full bg-${userSelection}Gradient ${
-            winner === "user" ? "animate-pulse" : ""
-          }`}
+          className={`flex h-52 w-52  items-center justify-center rounded-full  ${
+            userSelection === "rock"
+              ? "bg-rockGradient"
+              : userSelection === "paper"
+              ? "bg-paperGradient"
+              : "bg-scissorsGradient"
+          } ${winner === "user" ? "animate-pulse" : ""}`}
         >
           <span className="flex h-40 w-40 items-center justify-center rounded-full bg-white p-6">
             <img

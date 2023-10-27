@@ -35,11 +35,11 @@ function Rules() {
             <div className="mb-7 flex items-center justify-between">
               <h3 className="text-2xl font-bold uppercase text-dark">Rules</h3>
               <button onClick={toggleModal}>
-                <img src="/assets/icon-close.svg" />
+                <img src="./assets/icon-close.svg" />
               </button>
             </div>
             <img
-              src="/assets/image-rules.svg"
+              src="./assets/image-rules.svg"
               alt="image explaining game rules"
             />
           </div>

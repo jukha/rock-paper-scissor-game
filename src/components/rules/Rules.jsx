@@ -25,7 +25,7 @@ function Rules() {
   return (
     <>
       <a
-        className="fixed bottom-[50px] left-1/2 flex -translate-x-1/2 transform justify-center pt-10 md:static md:left-[unset] md:translate-x-0 md:justify-end"
+        className=" flex  justify-center pt-10  md:justify-end"
         onClick={toggleModal}
       >
         <button className="rounded-md border border-white px-8 py-2 font-semibold uppercase text-white">

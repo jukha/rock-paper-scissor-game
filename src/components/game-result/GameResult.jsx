@@ -17,7 +17,7 @@ function GameResult() {
           className=" after:inline-block; relative z-10 flex flex-col items-center justify-center"
           data-aos="zoom-in"
         >
-          <h2 className="mb-5 text-4xl font-bold uppercase text-white">
+          <h2 className="mb-5 text-5xl font-bold uppercase text-white">
             {winner === "user"
               ? "You win"
               : winner === "computer"

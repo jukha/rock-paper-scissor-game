@@ -48,9 +48,7 @@ export default {
       fontFamily: {
         barlow: ["Barlow Semi Condensed", "sans-serif"],
       },
-      maxWidth: {
-        custom: "1440px",
-      },
+      
     },
   },
   plugins: [],

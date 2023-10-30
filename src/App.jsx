@@ -11,8 +11,8 @@ function App() {
 
   return (
     <>
-      <main className="bg-radialGradient min-h-screen">
-        <div className="container max-w-custom mx-auto pt-10">
+      <main className="min-h-screen bg-radialGradient">
+        <div className="container max-w-7xl mx-auto pt-10 px-7">
           <Score />
           {!userSelection && <GameReady />}
           {userSelection && <GameStart />}

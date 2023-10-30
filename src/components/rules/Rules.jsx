@@ -24,17 +24,22 @@ function Rules() {
   }, [showModal]);
   return (
     <>
-      <a className="flex justify-end" onClick={toggleModal}>
+      <a
+        className="fixed bottom-[50px] left-1/2 flex -translate-x-1/2 transform justify-center pt-10 md:static md:left-[unset] md:translate-x-0 md:justify-end"
+        onClick={toggleModal}
+      >
         <button className="rounded-md border border-white px-8 py-2 font-semibold uppercase text-white">
           Rules
         </button>
       </a>
       {showModal && (
         <section className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="rounded-md bg-white p-6">
-            <div className="mb-7 flex items-center justify-between">
-              <h3 className="text-2xl font-bold uppercase text-dark">Rules</h3>
-              <button onClick={toggleModal}>
+          <div className="flex h-full w-full flex-col items-center gap-20 rounded-none  bg-white p-6 md:block md:h-auto md:w-auto md:rounded-md">
+            <div className="flex items-center justify-between md:mb-7">
+              <h3 className="mt-7 text-2xl font-bold uppercase text-dark md:mt-0">
+                Rules
+              </h3>
+              <button className="hidden md:block" onClick={toggleModal}>
                 <img src="./assets/icon-close.svg" />
               </button>
             </div>
@@ -42,6 +47,12 @@ function Rules() {
               src="./assets/image-rules.svg"
               alt="image explaining game rules"
             />
+            <button
+              className="absolute bottom-[50px] md:hidden"
+              onClick={toggleModal}
+            >
+              <img src="./assets/icon-close.svg" />
+            </button>
           </div>
         </section>
       )}

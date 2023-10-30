@@ -16,7 +16,7 @@ function GameReady() {
     });
   }, []);
   return (
-    <div className=" relative z-20 mx-auto flex max-w-[400px] flex-wrap items-center justify-center gap-20 bg-triangleImg  bg-center bg-no-repeat">
+    <div className=" relative z-20 mx-auto flex max-w-[400px] flex-wrap items-center justify-center gap-14 bg-triangleImg bg-[length:70%_80%] bg-center  bg-no-repeat  sm:gap-16 md:gap-20">
       {allSelections.map((selection, i) => {
         return (
           <a
@@ -28,10 +28,20 @@ function GameReady() {
             onClick={() => handleSelection(selection.name)}
           >
             <button
-              className={` bg-${selection.name}Gradient flex h-36 w-36 items-center justify-center rounded-full transition hover:opacity-80`}
+              className={` ${
+                selection.name === "rock"
+                  ? "bg-rockGradient"
+                  : selection.name === "paper"
+                  ? "bg-paperGradient"
+                  : "bg-scissorsGradient"
+              } flex h-28 w-28  items-center justify-center rounded-full bg-cover transition hover:opacity-80 md:h-36 md:w-36`}
             >
-              <span className="flex h-28 w-28 items-center justify-center rounded-full bg-white p-6">
-                <img src={selection.img} alt={`${selection.name} icon`} />
+              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white p-6 md:h-28 md:w-28">
+                <img
+                  className="h-[40px] w-[40px] object-contain md:h-16  md:w-16"
+                  src={selection.img}
+                  alt={`${selection.name} icon`}
+                />
               </span>
             </button>
           </a>
